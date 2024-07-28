@@ -1,8 +1,13 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.scss";
-// import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./Components/Home/Home";
+import Navigation from "./Components/Navigation/Navigation";
+import Character from "./Components/Character/Character";
+import About from "./Components/About/About";
+import ContactUs from "./Components/ContactUs/ContactUs";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   // const [data, setData] = useState({
@@ -25,14 +30,14 @@ function App() {
 
   return (
     <div className="App">
-      <Home data={data} />
-      {/* <Routes>
-        <Route path="/" element={<Home />} />
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Home data={data} />} />
         <Route path="/character" element={<Character />} />
         <Route path="/about" element={<About />} />
         <Route path="/contactUs" element={<ContactUs />} />
-        <Route path="/footer" element={<Footer />} />
-      </Routes> */}
+      </Routes>
+      <Footer />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import "./App.scss";
+import styles from "./App.module.scss";
 import { Routes, Route } from "react-router-dom";
 import Home from "./Components/Home/Home";
 import Navigation from "./Components/Navigation/Navigation";
@@ -29,7 +29,7 @@ function App() {
   console.log(data);
 
   return (
-    <div className="App">
+    <div className={styles.App}>
       <Navigation />
       <Routes>
         <Route path="/" element={<Home data={data} />} />

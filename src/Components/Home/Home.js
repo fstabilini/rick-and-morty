@@ -1,14 +1,16 @@
 import React from "react";
-import "./Home.scss";
+import styles from "./Home.module.scss";
+import Card from "../Card/Card";
 
 export default function Home({ data }) {
   return (
-    <div className="home-container">
+    <div className={styles.homeContainer}>
       {data.map((character) => (
-        <div key={character.id} className="character-card">
-          <img src={character.image} alt={character.name} />
-          <h2>{character.name}</h2>
-        </div>
+        <Card
+          key={character.id}
+          name={character.name}
+          image={character.image}
+        />
       ))}
     </div>
   );

@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Navigation.scss";
+import styles from "./Navigation.module.scss";
 
 export default function Navigation() {
   return (
-    <div>
+    <div className={styles.navigation}>
       <nav>
         <ul>
           <li>

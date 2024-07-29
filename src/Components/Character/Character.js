@@ -1,9 +1,5 @@
-import React from "react";
+import styles from "./Character.module.scss";
 
 export default function Character() {
-  return (
-    <div>
-      <h1>Character</h1>
-    </div>
-  );
+  return <div className={styles.characterContainer}></div>;
 }

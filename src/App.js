@@ -10,13 +10,6 @@ import ContactUs from "./Components/ContactUs/ContactUs";
 import Footer from "./Components/Footer/Footer";
 
 function App() {
-  // const [data, setData] = useState({
-  //   name: "",
-  //   status: "",
-  //   species: "",
-  //   gender: "",`
-  // });
-
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -29,14 +22,16 @@ function App() {
   console.log(data);
 
   return (
-    <div className={styles.App}>
+    <div className={styles.appContainer}>
       <Navigation />
-      <Routes>
-        <Route path="/" element={<Home data={data} />} />
-        <Route path="/character" element={<Character />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contactUs" element={<ContactUs />} />
-      </Routes>
+      <main className={styles.content}>
+        <Routes>
+          <Route path="/" element={<Home data={data} />} />
+          <Route path="/character/:id" element={<Character />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<ContactUs />} />
+        </Routes>
+      </main>
       <Footer />
     </div>
   );

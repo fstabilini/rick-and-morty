@@ -8,6 +8,7 @@ export default function Home({ data }) {
       {data.map((character) => (
         <Card
           key={character.id}
+          id={character.id}
           name={character.name}
           image={character.image}
         />

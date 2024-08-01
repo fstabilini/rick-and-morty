@@ -11,9 +11,6 @@ export default function Navigation() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/character">Character</Link>
-          </li>
-          <li>
             <Link to="/about">About</Link>
           </li>
           <li>
